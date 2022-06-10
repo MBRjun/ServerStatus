@@ -65,9 +65,9 @@ include 'menu.php';
                                         if ($server['type'] == "default"){
                                             echo "Nginx/Apache";
                                         }else if ($server['type']== "winbt"){
-                                            echo "Win版宝塔";
+                                            echo "Windows 版宝塔";
                                         }elseif ($server['type'] == "linuxbt"){
-                                            echo "Linux版宝塔";
+                                            echo "Linux 版宝塔";
                                         }else{
                                             echo "未知";
                                         } ?></td>
