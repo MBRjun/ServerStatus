@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>ServerStatus</title>
-  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/acewfdy/static/Image/20200324105322.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <!-- 弃用 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/acewfdy/static/Image/20200324105322.png" type="image/x-icon" /> -->
+  <link rel="stylesheet" href="https://cos.mbrjun.cn/assets/h841/libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+  <script src="https://cos.mbrjun.cn/assets/h841/libs/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="https://cos.mbrjun.cn/assets/sweetalert/alert.js"></script>
+  <script src="https://cos.mbrjun.cn/assets/h841/libs/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div class="container">
