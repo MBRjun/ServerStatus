@@ -72,60 +72,60 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
               <div class="">
 	            <div class="">
 	              <span class="pull-right text-danger" id="cpus"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>CPU占用 </span>
+	              <span>CPU </span>
 	            </div>
 	            <div class="progress progress-xs m-t-sm bg-white">
 	              <div id="cpu_csss" class="progress-bar bg-danger" data-toggle="tooltip" style="width: 100%"></div>
 	            </div>
 	            <div class="">
 	              <span class="pull-right text-danger" id="memorys"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>占用内存 <span class="badge badge-sm bg-dark" id="memory_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span</span>
+	              <span>内存 <span class="badge badge-sm bg-dark" id="memory_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span</span>
 	            </div>
 	            <div class="progress progress-xs m-t-sm bg-white">
 	              <div id="memory_csss" class="progress-bar bg-danger" data-toggle="tooltip" style="width: 100%"></div>
 	            </div>
 	            <div class="">
 	              <span class="pull-right text-danger" id="disks"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>磁盘占用 <span class="badge badge-sm bg-dark" id="disk_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span>
+	              <span>磁盘（/） <span class="badge badge-sm bg-dark" id="disk_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span>
 	            </div>
 	            <div class="progress progress-xs m-t-sm bg-white">
 	              <div id="disk_csss" class="progress-bar bg-danger" data-toggle="tooltip"  style="width: 100%"></div>
 	            </div>
 	            <div class="">
 	              <span class="pull-right text-danger" id="memCacheds"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>内存缓存 <span class="badge badge-sm bg-dark" id="memCached_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span>
+	              <span>Cache <span class="badge badge-sm bg-dark" id="memCached_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span>
 	            </div>
 	            <div class="progress progress-xs m-t-sm bg-white">
 	              <div id="memCached_csss" class="progress-bar bg-danger" data-toggle="tooltip" style="width: 100%"></div>
 	            </div>
 	            <div class="">
 	              <span class="pull-right text-danger" id="memBufferss"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>内存缓冲 <span class="badge badge-sm bg-dark" id="memBuffers_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span>
+	              <span>Buffer <span class="badge badge-sm bg-dark" id="memBuffers_datas"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span>
 	            </div>
 	            <div class="progress progress-xs m-t-sm bg-white">
 	              <div id="memBuffers_csss" class="progress-bar bg-danger" data-toggle="tooltip" style="width: 100%"></div>
 	            </div>
 	            <div class="">
 	              <span class="pull-right text-danger" id="state_ss"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>系统负载 <span id="states"><span class="badge badge-sm bg-dark"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span></span>
+	              <span>负载 <span id="states"><span class="badge badge-sm bg-dark"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span></span></span>
 	            </div>
 	            <div class="progress progress-xs m-t-sm bg-white">
 	              <div id="state_csss" class="progress-bar bg-danger" data-toggle="tooltip" style="width: 100%"></div>
 	            </div>
-	            <div class="" id="ios_div">
+	            <!-- <div class="" id="ios_div">
 	              <span class="pull-right text-default" id="ios"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
 	              <span>IO</span>
-	            </div>
+	            </div> -->
 				<br id="ios_br"/>
 	            <div class="" id="io1s_div">
 	              <span class="pull-right text-default" id="io1s"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
 	              <span>实时IO</span>
 	            </div>
 				<br id="io1s_br"/>
-	            <div class="" id="eths_div">
+	            <!-- <div class="" id="eths_div">
 	              <span class="pull-right text-default" id="eths"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
 	              <span>网络</span>
-	            </div>
+	            </div> -->
 				<br id="eths_br"/>
 	            <div class="" id="eth1s_div">
 	              <span class="pull-right text-default" id="eth1s"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
@@ -134,17 +134,17 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 				<br id="eth1s_br"/>
 	            <div class="">
 	              <span class="pull-right text-default" id="times"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>服务器系统时间</span>
+	              <span>服务器时间</span>
 	            </div>
 				<br />
 	            <div class="">
 	              <span class="pull-right text-default" id="u_times"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>持续运行时长</span>
+	              <span>开机时长</span>
 	            </div>
 				<br />
 	            <div class="">
 	              <span class="pull-right text-default" id="ip"><i class="fa fa-spinner fa-spin" aria-hidden="true"></i></span>
-	              <span>您的IP</span>
+	              <span>您的 IP</span>
 	            </div>
 				<br />
 	            <div class="">
@@ -684,14 +684,14 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 				        	se_tx = data.networkStats.networks.eth0.tx;
                             se_rx = data.networkStats.networks.eth0.rx;
 				        	if (floats(setSize(data.networkStats.networks.eth0.tx, 'mb')) > 1024) {
-                                var aaa_tx = floats(setSize(data.networkStats.networks.eth0.tx, 'gb')) + "GB";
+                                var aaa_tx = floats(setSize(data.networkStats.networks.eth0.tx, 'gb')) + "GiB";
                             } else {
-                                var aaa_tx = floats(setSize(data.networkStats.networks.eth0.tx, 'mb')) + "MB";
+                                var aaa_tx = floats(setSize(data.networkStats.networks.eth0.tx, 'mb')) + "MiB";
                             }
                             if (floats(setSize(data.networkStats.networks.eth0.rx, 'mb')) > 1024) {
-                                var aaa_rx = floats(setSize(data.networkStats.networks.eth0.rx, 'gb')) + "GB";
+                                var aaa_rx = floats(setSize(data.networkStats.networks.eth0.rx, 'gb')) + "GiB";
                             } else {
-                                var aaa_rx = floats(setSize(data.networkStats.networks.eth0.rx, 'mb')) + "MB";
+                                var aaa_rx = floats(setSize(data.networkStats.networks.eth0.rx, 'mb')) + "MiB";
                             }
                             $("#eth").html('<span class="badge badge-sm bg-dark"><i class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></i>&nbsp;' + aaa_tx + '</span>&nbsp;' + '<span class="badge badge-sm bg-dark"><i class="glyphicon glyphicon-cloud-download" aria-hidden="true"></i>&nbsp;' + aaa_rx + '</span>');
                             $("#eth1").html('<span class="badge badge-sm bg-dark"><i class="glyphicon glyphicon-cloud-upload" aria-hidden="true"></i>&nbsp;' + ForDight(data.networkStats.networks.eth0.tx - se_tx, 3) + '</span>&nbsp;' + '<span class="badge badge-sm bg-dark"><i class="glyphicon glyphicon-cloud-download" aria-hidden="true"></i>&nbsp;' + ForDight(data.networkStats.networks.eth0.rx - se_rx, 3) + '</span>');
