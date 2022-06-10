@@ -1,11 +1,11 @@
 <?php
 /**
- * <strong style="color:#B0E2FF;font-family: 楷体;">Typecho服务器状态插件</strong>
+ * <strong style="color:#B0E2FF;font-family: 楷体;">Typecho 服务器状态插件</strong>
  * 
  * @package ServerStatus
  * @author Weifeng,MBRjun
- * @version 2022.05.17-1
- * @update: 2022.05.17
+ * @version 2022.06.10-1
+ * @update: 2022.06.10
  * @link https://www.mbrjun.cn/
  */
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -108,7 +108,7 @@ class ServerStatus_Plugin implements Typecho_Plugin_Interface
 						<li><a href="https://wfblog.net/" target="_blank">作者博客</a></li>
 					</ul>
 				</div>';
-		echo "<h2>感谢使用ServerStatus插件，本插件由<a href='https://wfblog.net/'>Weifeng</a>编写，<a href='https://www.mbrjun.cn/'>MBRjun</a>修改。</h2>";
+		echo "</br><h3>感谢使用ServerStatus插件，本插件由<a href='https://wfblog.net/'>Weifeng</a>编写，<a href='https://www.mbrjun.cn/'>MBRjun</a>修改。</h3>";
 		$SweetAlert = new Typecho_Widget_Helper_Form_Element_Radio(
 			'SweetAlert', array(
 				'0' => '未引入',
@@ -116,13 +116,13 @@ class ServerStatus_Plugin implements Typecho_Plugin_Interface
 			), '0', 'SweetAlert', '是否已经引入SweetAlert组件，如果已经引入，请选择后者，不然会报错哦~');
 		$IPApi = new Typecho_Widget_Helper_Form_Element_Select(
 			'IPApi', array(
-				'IP.SB' => '<a href="https://ip.sb/">IP.SB</a>--Json',
-				'IP-API' => '<a href="https://ip-api.com/">IP-API</a>--Json',
-				'PConline' => '<a href="https://www.pconline.com.cn/">PConline</a>--Json',
-				'IW3C' => '<a href="https://www.iw3c.com.cn/">IW3C</a>--Json',
-				'SOHU' => '<a href="https://pv.sohu.com/cityjson?ie=utf-8">SOHU</a>--Js',
+				'IP.SB' => '<a href="https://ip.sb/">IP.SB</a>  Json',
+				'IP-API' => '<a href="https://ip-api.com/">IP-API</a>  Json',
+				'PConline' => '<a href="https://www.pconline.com.cn/">PConline</a>  Json',
+				'IW3C' => '<a href="https://www.iw3c.com.cn/">IW3C</a>  Json',
+				'SOHU' => '<a href="https://pv.sohu.com/cityjson?ie=utf-8">SOHU</a> JS（不推荐）',
 			), 'IP.SB', 'IPApi', '获取IP信息的API，默认为IP.SB，四个API各有优劣（IP.SB支持IPV6但国内通讯速度较慢，IP-API信息全但国内通讯速度较慢，PConline获取速度快但国外信息不全，IW3C速度快但是是小厂，SOHU是JS不需要通过服务器获取但信息不全）');
-		$UptimeKey = new Typecho_Widget_Helper_Form_Element_Textarea('UptimeKey', NULL, 'ur567798-9efa447ca49c9e64e1f3f984', 'UptimeRobot Key', '每个Key之间以英文半角逗号隔开');
+		$UptimeKey = new Typecho_Widget_Helper_Form_Element_Textarea('UptimeKey', NULL, 'ur567798-9efa447ca49c9e64e1f3f984', 'UptimeRobot Read-only API Key', '出于安全性考虑，请使用只读 API Key，而不是主 API Key；每个Key之间以英文半角逗号隔开');
 		$UptimeLink = new Typecho_Widget_Helper_Form_Element_Radio(
 			'UptimeLink', array(
 				'true' => '是',
@@ -205,7 +205,7 @@ class ServerStatus_Plugin implements Typecho_Plugin_Interface
 				throw new Typecho_Plugin_Exception($e->getMessage());
 			}
 		} else {
-			throw new Typecho_Plugin_Exception(_t('你的适配器为%s，目前ServerStatus插件仅支持Mysql', $adapterName));
+			throw new Typecho_Plugin_Exception(_t('你的适配器为%s，目前ServerStatus插件仅支持MySQL', $adapterName));
 		}
 	}
 
@@ -217,8 +217,8 @@ class ServerStatus_Plugin implements Typecho_Plugin_Interface
 	{
 		$options = Typecho_Widget::widget('Widget_Options');
 		if(!empty($options->plugin('ServerStatus')->UptimeKey) || $options->plugin('ServerStatus')->SweetAlert != 1){
-			echo "\n";
-			echo '<!-- ServerStatus Plugin Of Typecho -->';
+			#echo "\n";
+			#echo '<!-- ServerStatus Plugin Of Typecho -->';
 			echo "\n";
 			if($options->plugin('ServerStatus')->SweetAlert != 1){
 				echo "";
@@ -247,7 +247,7 @@ EOF;
 EOF;
 				echo "\n";
 			}
-			echo '<!-- ServerStatus Plugin Of Typecho -->';
+			#echo '<!-- ServerStatus Plugin Of Typecho -->';
 			echo "\n";
 		}
 	}
@@ -259,8 +259,7 @@ EOF;
 	public static function footer(){
 		$options = Typecho_Widget::widget('Widget_Options');
 		echo "\n";
-		echo '<!-- ServerStatus Plugin Of Typecho -->';
-		echo "\n";
+		#echo "\n";
 		if($options->plugin('ServerStatus')->SweetAlert != 1){
 			echo "<script src=\"https://cos.mbrjun.cn/assets/sweetalert/alert.js\"></script>\n";
 		}
@@ -273,8 +272,8 @@ EOF;
 		}
 		// 插入控制台标识
 		#echo '<script>console.log("\n %c ServerStatus Plugin Of Typecho By Weifeng ","color:#fff; background: linear-gradient(to right , #7A88FF, #d27aff); padding:5px; border-radius: 10px;");console.log("\n %c 插件：https://wfblog.net/archives/serverstatus_plugin.html","color:#fff; background: linear-gradient(to right , #7A88FF, #d27aff); padding:5px; border-radius: 10px;"); </script>';
-		echo "\n";
-		echo '<!-- ServerStatus Plugin Of Typecho -->';
+		#echo "\n";
+		#echo '<!-- ServerStatus Plugin Of Typecho -->';
 		echo "\n";
 	}
 
@@ -431,7 +430,7 @@ EOF;
 	{
 		$options = Typecho_Widget::widget('Widget_Options');
 		if (!isset($options->plugins['activated']['ServerStatus'])) {
-			return 'ServerStatus插件未激活';
+			return 'ServerStatus 插件未激活';
 		}
 		if (!isset($pattern) || $pattern == "" || $pattern == NULL || $pattern == "SHOW_TEXT" || $pattern == "SHOW_MAIN") {
 			$pattern = "<li><a href=\"?id={id}\" title=\"{desc}\" target=\"_self\">{name}</a></li>\n";
@@ -462,9 +461,9 @@ EOF;
 			if ($server['type'] == "default"){
 				$server['type_cn'] = "Nginx/Apache";
 			}else if ($server['type']== "winbt"){
-				$server['type_cn'] = "Win版宝塔";
+				$server['type_cn'] = "Windows 版宝塔";
 			}elseif ($server['type'] == "linuxbt"){
-				$server['type_cn'] = "Linux版宝塔";
+				$server['type_cn'] = "Linux 版宝塔";
 			}else{
 				$server['type_cn'] = "未知";
 			}
@@ -548,7 +547,7 @@ EOF;
 	{
 		$options = Typecho_Widget::widget('Widget_Options');
 		if (!isset($options->plugins['activated']['ServerStatus'])) {
-			return 'ServerStatus插件未激活';
+			return 'ServerStatus 插件未激活';
 		}
 		return $options->plugin('ServerStatus')->$key;
 	}
