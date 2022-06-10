@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>ServerStatus</title>
-  <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/acewfdy/static/Image/20200324105322.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <!-- <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/acewfdy/static/Image/20200324105322.png" type="image/x-icon" /> -->
+  <link rel="stylesheet" href="https://cos.mbrjun.cn/assets/h841/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="container">
@@ -20,9 +20,9 @@ foreach ($servers as $server) {
 	if ($server['type'] == "default"){
         $server['type_cn'] = "Nginx/Apache";
     }else if ($server['type']== "winbt"){
-        $server['type_cn'] = "Win版宝塔";
+        $server['type_cn'] = "Windows 版宝塔";
     }elseif ($server['type'] == "linuxbt"){
-        $server['type_cn'] = "Linux版宝塔";
+        $server['type_cn'] = "Linux 版宝塔";
     }else{
         $server['type_cn'] = "未知";
     }
@@ -45,6 +45,6 @@ foreach ($servers as $server) {
   </div>
   
 </body>
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" type="text/javascript"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<script src="https://cos.mbrjun.cn/assets/h841/libs/jquery/jquery.min.js" type="text/javascript"></script>
+<script src="https://cos.mbrjun.cn/assets/h841/libs/bootstrap/js/bootstrap.min.js"></script>
 </html>
